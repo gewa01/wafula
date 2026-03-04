@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wafula - Professional & Business Services</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header with Logo and Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <!-- Replace with your actual logo file path -->
+                <img src=georgea.jpeg width="400px" alt="Wafula Logo">
+                <h2>George Wafula</h2>
+                <span>PO BOX 90502-80100 Mombasa</span>
+                <span>0719596294,0734588024<span/>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#professional">ABOUT</a></li>
+                <li><a href="#business">BUSINESS PORTIFOLIO</a></li>
+                <li><a href="#contact">CONTACTS US</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Professional Section -->
+    <section id="professional" class="section container">
+        <h2 class="section-title">ABOUT</h2>
+        <div class="profile-grid">
+            <div class="card">
+                <h3>EDUCATION</h3>
+                <p><strong>BA Econ</strong><br>University of Nairobi</p>
+                <p><strong>CPA</strong><br>KASNEB</p>
+                <p><strong>COP</strong><br>COLLEGE OF INSURANCE</p>
+            </div>
+            <div class="card">
+                <h3>PROFESSIONAL QUALIFICATION</h3>
+                <ul>
+                    <li>Certified COP-Insurance</li>
+                    <li>Licensed CPA</li>
+                    <li>BSC Soft ware Engineering -In Progress</li>
+                    <li>MBA Finance-In Progress</li/>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>WORK EXPERIENCE</h3>
+                <p><strong>Centre Executive</strong> at Informatics Group Singapore</p>
+                <p><strong>CEO</strong>  Metatrone Group</p>
+                <p><strong>CEO</strong>  SSBR Group</p>
+                <p><strong>Lecturer</strong>  KIM</p>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Business Services Section -->
+    <section id="business" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title"> Suite of Services</h2>
+            <div class="business-grid">
+                <div class="service-card">
+                    <h3>Insurance Agency Services</h3>
+                    <p>Comprehensive coverage solutions for individuals and corporations.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Business Financing</h3>
+                    <p>Strategic financial advisory and capital sourcing for growth.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Clearing and Forwarding</h3>
+                    <p>Expert logistics and customs clearance for international trade.</p>
+                </div>
+                <div class="service-card">
+                    <h3>General Contractors</h3>
+                    <p>Reliable project management for construction and civil works.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact" class="section container">
+        <h2 class="section-title">Contact Us</h2>
+        <div class="contact-wrapper">
+            <form id="wafula-contact-form">
+                <input type="text" id="name" placeholder="Full Name" required>
+                <input type="email" id="email" placeholder="Email Address" required>
+                <select id="service" required>
+                    <option value="">Select Service Inquiry</option>
+                    <option value="Insurance">Insurance Agency</option>
+                    <option value="Financing">Business Financing</option>
+                    <option value="Logistics">Clearing and Forwarding</option>
+                    <option value="Contracting">General Contracting</option>
+                </select>
+                <textarea id="message" placeholder="How can we help you?" rows="5" required></textarea>
+                <button type="submit" class="btn-submit">Send Message</button>
+            </form>
+            <div id="form-response"></div>
+        </div>
+    </section>
+
+    <script src="script.js">
+
+        
+});
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+:root {
+    --primary: #3f502c;
+    --accent: #3498db;
+    --light-bg: #f9f9f9;
+    --text-color: #333;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Segoe UI', Tahoma, sans-serif; color: var(--text-color); line-height: 1.6; }
+.container { width: 90%; max-width: 1200px; margin: auto; }
+.section { padding: 60px 0; }
+.bg-light { background-color: var(--light-bg); }
+.section-title { text-align: center; margin-bottom: 40px; font-size: 2rem; color: var(--primary); }
+
+/* Navigation */
+.navbar { display: flex; justify-content: space-between; align-items: center; padding: 20px 5%; background: white; box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
+.nav-links { display: flex; list-style: none; gap: 25px; }
+.nav-links a { text-decoration: none; color: var(--primary); font-weight: 600; }
+
+/* Grids & Cards */
+.profile-grid, .business-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+.card, .service-card { background: white; padding: 25px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: 0.3s; border-top: 4px solid var(--accent); }
+.card:hover, .service-card:hover { transform: translateY(-5px); box-shadow: 0 6px 12px rgba(0,0,0,0.1); }
+
+/* Form Styling */
+.contact-wrapper { max-width: 600px; margin: auto; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+#wafula-contact-form { display: flex; flex-direction: column; gap: 15px; }
+input, select, textarea { padding: 12px; border: 1px solid #ddd; border-radius: 4px; width: 100%; }
+.btn-submit { background: var(--primary); color: white; padding: 14px; border: none; border-radius: 4px; cursor: pointer; font-weight: bold; transition: background 0.3s; }
+.btn-submit:hover { background: var(--accent); }
+
+
+/* --- RESPONSIVENESS --- */
+
+/* 1. Large Tablets & Small Laptops (Max width: 1024px) */
+@media (max-width: 1024px) {
+    .container {
+        width: 95%; /* Give more breathing room on sides */
+    }
+    .profile-grid, .business-grid {
+        grid-template-columns: repeat(2, 1fr); /* Switch to 2 columns */
+    }
+}
+
+/* 2. Tablets (Max width: 768px) */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Stack logo and menu */
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .nav-links {
+        gap: 15px;
+        font-size: 0.9rem;
+    }
+
+    .section-title {
+        font-size: 1.75rem;
+    }
+
+    /* Stack cards vertically on tablets if they get too squeezed */
+    .profile-grid, .business-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* 3. Mobile Devices (Max width: 480px) */
+@media (max-width: 480px) {
+    .nav-links {
+        flex-direction: column; /* Stack navigation links */
+        gap: 10px;
+    }
+
+    .section {
+        padding: 40px 0; /* Reduce vertical spacing */
+    }
+
+    .contact-wrapper {
+        padding: 20px; /* Slimmer padding for smaller screens */
+    }
+
+    .btn-submit {
+        width: 100%; /* Ensure button is easy to tap */
+    }
+
+    .card, .service-card {
+        padding: 15px;
+    }
+}
+
+/* 4. Extra Small Screens / Old Phones (Max width: 320px) */
+@media (max-width: 320px) {
+    .section-title {
+        font-size: 1.5rem;
+    }
+    
+    #site-logo {
+        height: 40px; /* Shrink logo slightly */
+        
+    }
+}
+
